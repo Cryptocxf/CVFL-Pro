@@ -285,22 +285,19 @@ class Server():
 
     def k_prime(self, result, num, ab):
         k_min = int(num / 100)
-        k_avg = int(num / 10)
+        k_opt = int(num / 10)
         k_max=int(num / 10)
         eucl_distance1 = torch.norm(result[1] - result[0])
         eucl_distance2 = torch.norm(result[1])
         k_kk = (ab[0] * eucl_distance2) / (ab[1] * eucl_distance1)
         print('kkk=',k_kk,k_avg* k_kk)
-        k = int(max(k_min, min(k_max, k_min * k_kk)))
+        k = int(max(k_min, min(k_max, k_opt * k_kk)))
         format_k = "{:.3f}".format(k / num)
         self.k_list.append(format_k)
         print('k=', self.k_list)
         return k
 
     def AOTopk(self, result, k, ab):
-        alpha_1 = 0.5
-        beta_1 = 0.5
-        # abs_result=torch.abs(result[1])
 
         Ma = ab[0] * torch.abs(result[1])
         Va = ab[1] * torch.abs(result[1] - result[0])
