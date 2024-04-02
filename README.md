@@ -55,7 +55,7 @@ def calcu_comm_cost(self,result):
 def k_prime(self, result, num, ab):
   k_min = int(num / 100)
   k_opt = int(num / 10)
-  k_max=int(num / 5)
+  k_max=int(num / 10)
   eucl_distance1 = torch.norm(result[1] - result[0])
   eucl_distance2 = torch.norm(result[1])
   k_kk = (ab[0] * eucl_distance2) / (ab[1] * eucl_distance1)
