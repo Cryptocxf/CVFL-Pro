@@ -1,5 +1,5 @@
-# ACV-FL: Adaptive Communication Optimization for Collusion-Resistant Verification Federated Learning
-ACV is a generic framework for federated learning for collusion-resistant verification with adaptive communication optimization (AOTop-k).
+# CVFL-Pro: Adaptive Communication Optimization for Federated Learning with Collusion-Resistant Verification
+CVFL-Pro is a generic framework for federated learning for collusion-resistant verification with adaptive communication optimization (AOTop-k).
 
 ## Experimental Environment
 * Ubuntu 20.04.5 LTS PC
